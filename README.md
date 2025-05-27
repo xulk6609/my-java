@@ -2,13 +2,30 @@
 
 ## 基本数据类型（四个整数型，两个浮点型，一种字符型， 一种布尔型）
 
-- byte
-- short
-- int
-- long
-- float
-- double
+| 基本数据类 | 默认值 |
+|:--------:|:--------:|
+|  byte   | 0   |
+|  short  | 0   |
+|  int    | 0   |
+|  long   | 0L  |
+|  float  | 0.0f |
+|  double | 0.0d  |
+|  boolean| false |
+|  char   | '\u0000' |
+|  引用类型 | null  |
 
-- boolean
+## 类型转换
 
-- char
+``` jave
+byte,short,char—> int —> long—> float —> double
+```
+
+1. 不能对boolean类型进行类型转换。
+
+2. 不能把对象类型转换成不相关类的对象。
+
+3. 在把容量大的类型转换为容量小的类型时必须使用强制类型转换。
+
+4. 转换过程中可能导致溢出或损失精度
+
+5. 浮点数到整数的转换是通过舍弃小数得到，而不是四舍五入
